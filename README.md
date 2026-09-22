@@ -1,5 +1,7 @@
 # MAPGD Quick Start
 
+The remaining code is being organized and will be released in future updates.
+
 Run these commands from the project root in Windows PowerShell.
 
 ## Setup
