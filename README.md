@@ -13,8 +13,7 @@ $env:OPENAI_API_KEY = "your-api-key"
 $env:PYTHONIOENCODING = "utf-8"
 ```
 
-Keep the embedding model in `all-MiniLM-L6-v2/`, or update
-`sentence_transformer_model` in `paper_config.py`. The default API model is
+Keep the embedding model in `all-MiniLM-L6-v2/`. The default API model is
 `gpt-4o-mini`.
 
 ## Run selected datasets
@@ -22,12 +21,11 @@ Keep the embedding model in `all-MiniLM-L6-v2/`, or update
 Run one dataset:
 
 ```powershell
-.\.venv\Scripts\python.exe experiment_baseline.py --task liar
+.\.venv\Scripts\python.exe experiment_baseline.py --task [your task]
 ```
 
 Available tasks: `liar`, `ethos`, `jailbreak`, `gsm8k`, `aqua`, `svamp`, and
-`sarcasm`. Data is loaded from `data/`; Sarcasm requires separately supplied
-`data/sarcasm/train.jsonl` and `test.jsonl` files with `text` and binary `label` fields.
+`sarcasm`. Data is loaded from `data/`.
 
 Run several datasets sequentially:
 
@@ -58,7 +56,7 @@ if run_baseline_experiment(task="liar") is None:
 
 This loads the full files but uses smaller samples for optimization and
 evaluation. It calls the model API and leaves configuration files unchanged.
-To switch tasks, change both `liar_config` and `task="liar"`.
+
 
 ## Results
 
